@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 300px;
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-section button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: azure;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: darkgreen;
+}
+.coordinate {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    z-index: 1000; 
+}
+
+#map {
+    flex-grow: 1;
+    height: 100vh;
+}
+#mapInput{
+    display: none;
+}
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#appendix {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+

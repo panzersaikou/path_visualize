@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Find the Shortest Path</h1>
+            <div class="input-section">
+                
+                <label for="graphFile">Please select graph to search</label>
+                <input type="file" id="graphFile">
+
+                <label for="nodesFile">Please select nodes to search</label>
+                <input type="file" id="nodesFile">
+                <button onclick="loadGraphAndNodes()">Load Files</button>
+                <select id="inputMethod">
+                    <option value="manual">Manual Input</option>
+                    <option value="map">Select on Map</option>
+                </select>
+                <div id="manualInput">
+                    <input type="number" id="num1" placeholder="Please input start point">
+                    <input type="number" id="num2" placeholder="Please input end point">
+                </div>
+                <div id="mapInput">
+                    <button onclick="clearLast()">Clear Last choose</button>
+                </div>
+
+                <p class="coordinate">Coordinates: </p>
+                
+                <!-- <input type="number" id="num1" placeholder="Please input start point">
+                <input type="number" id="num2" placeholder="Please input end point"> -->
+                <select id="algorithm">
+                    <option value="dijkstra">Dijkstra</option>
+                    <option value="bi_dijkstra">Bi_dijkstra</option>
+                    <option value="astar">Astar</option>
+                    <option value="ALT">ALT</option>
+                    <option value="CH">CH</option>
+                    <option value="H2H">H2H</option>
+                    <option value="PLL">PLL</option>
+                </select>
+                <button id="find_way">Find Shortest Way</button>
+            </div>
+            <div id="result"></div>
+
+            <div id="appendix"></div>
+        </div>
+        <div id="map">
+            <div class = "coordinate"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
